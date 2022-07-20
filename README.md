@@ -5,4 +5,4 @@ On the exam, you need to write one of the two functions "get_next_line" or "ft_p
 
 ## My score
 
-(./42_ExamRank03/my_score.png)
+(/42_EXAMRANK03/my_score.png)
