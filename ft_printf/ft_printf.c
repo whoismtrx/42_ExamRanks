@@ -59,7 +59,7 @@ int	ft_puthex(unsigned int nbr)
 	int	size = 0;
 	char *hex = "0123456789abcdef";
 
-	if (nbr > 16)
+	if (nbr > 15)
 	{
 		size += ft_puthex(nbr / 16);
 		size += ft_puthex(nbr % 16);
@@ -100,4 +100,9 @@ int	ft_printf(char *format, ...)
 		i++;
 	}
 	return (size);
+}
+
+int main()
+{
+	ft_printf("%x\n", 16);
 }
