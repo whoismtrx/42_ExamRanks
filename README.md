@@ -13,4 +13,4 @@ The following exams are included in this repository:
   
 ## Usage
 
-To access the subjects and solutions for each exam, navigate to the corresponding folder. The subjects are provided in README.md, and the solutions are provided in code format.
+To access the subjects and solutions for each exam, navigate to the corresponding folder. The subjects are provided in text format, and the solutions are provided in code format.
