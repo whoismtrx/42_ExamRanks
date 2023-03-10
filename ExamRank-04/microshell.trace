@@ -1,0 +1,3248 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r3p12.1337.ma
+Darwin 19.6.0 x86_64
+$> date
+Fri Oct 28 11:28:06 +01 2022
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/c++/4.2.1
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: git@vogsphere-v2.1337.ma:exam-2022-10-28/orekabe_exam-rank-04_exam_16h34m21s.git
+
+= Git history ==================================================================
+$> git -C /tmp/tmp8ijay44o/user log --pretty='%H - %an, %ad : %s'
+354f14d6cde4ccb804e12f0ead046516a99320f7 - Exam 42, Fri Oct 28 11:27:41 2022 +0100 : microshell third push
+2802cdbd4a87af838b125d7924039dbc958e418a - Exam 42, Fri Oct 28 11:18:55 2022 +0100 : microshell second push
+1aa543d9b416784b5ef855d19df531bc54eed5d1 - Exam 42, Fri Oct 28 11:11:44 2022 +0100 : microshell first push
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp8ijay44o/user
+total 8
+-rw-r--r--  1 root  wheel  933 Oct 28 11:28 __GIT_HISTORY
+drwxr-xr-x  7 root  wheel  224 Oct 28 11:28 microshell
+
+/tmp/tmp8ijay44o/user/microshell:
+total 40
+-rw-r--r--  1 root  wheel  2160 Oct 28 11:28 exec.c
+-rw-r--r--  1 root  wheel   230 Oct 28 11:28 micro_utils.c
+-rw-r--r--  1 root  wheel   216 Oct 28 11:28 microshell.c
+-rw-r--r--  1 root  wheel   586 Oct 28 11:28 microshell.h
+-rw-r--r--  1 root  wheel  1690 Oct 28 11:28 parse.c
+ 
+= microshell ===================================================================
+['start5mroyogu/0v3rh5m8o/', 'start5mroyogu/0v3rh5m8o/02986hui9/', 'start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/', 'start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d', 'start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f25yhy7147', 'start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf/', 'start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf/f0f2pyfl79', 'start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg/', 'start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg/f0tn6d9yx6', 'start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg/f1rofmhyt7', 'start5mroyogu/0v3rh5m8o/02986hui9/f0zewrt7g4', 'start5mroyogu/0v3rh5m8o/2u6agdloz/', 'start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6/', 'start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6/f0rs691smo', 'start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6/f167hxnjmv', 'start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6/f2hdcalj3e', 'start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va/', 'start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va/f0x2omacxq', 'start5mroyogu/0v3rh5m8o/2u6agdloz/f08u75gy4n', 'start5mroyogu/0v3rh5m8o/2u6agdloz/f168d74s01', 'start5mroyog
+u/0v3rh5m8o/2u6agdloz/f2nmm9mtpw', 'start5mroyogu/0v3rh5m8o/f0or2k0k3r', 'start5mroyogu/0v3rh5m8o/f1rvt5r7zj', 'start5mroyogu/0v3rh5m8o/f2q5e9ih75', 'start5mroyogu/1x8vsv9pp/', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1/', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1/f0f6nss43f', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97/', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97/f0xwaoogbv', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97/f1bghe6jz2', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4/', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4/f0o5pbmopo', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/f0e8urt6qi', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/f1z79kx7d6', 'start5mroyogu/1x8vsv9pp/0nwu4taq6/f273of3ntm', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk/', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk/f0bkhdinzl', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk/f1c8j8vyh6', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/f0bjyn5ovp', 'start5mroyogu/1x8vsv9pp/1id2xtvqu/f1wk
+fuwff5', 'start5mroyogu/1x8vsv9pp/f04k1uzhll', 'start5mroyogu/f09zicbvah', 'start5mroyogu/f1mw0bqbxv']
+================================================================================
+Generating test 1
+Cmd ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 2
+Cmd ----------------------------------------------------------------------------
+cd ./start5mroyogu
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 3
+Cmd ----------------------------------------------------------------------------
+cd ./start5mroyogu; c
+d ..; cd ./start5mroyogu
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 4
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls -laR start5mroyogu
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 5
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+===========================================
+=====================================
+Generating test 6
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls -laR start5mroyogudoesexist "|" /usr/bin/grep start
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 7
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat 
+-e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "
+|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 8
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep m "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/ca
+t -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+ "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|
+" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /
+usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/
+bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin
+/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat
+ -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 9
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep h "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/b
+in/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/c
+at -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat 
+-e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e 
+"|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" 
+/usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /us
+r/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bi
+n/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 10
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep c "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" 
+/usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr
+/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bi
+n/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/c
+at -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -
+e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "
+|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /
+usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 11
+Cmd ----------------------------------------------------------------------------
+cd ";" /usr/bin/ls start5mroyogu
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 12
+Cmd ----------------------------------------------------------------------------
+cd ";" /usr/bin/ls start5mroyogu 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+--------------------------------------------------------------------------------
+Done
+======================================================================
+==========
+()
+================================================================================
+Generating test 13
+Cmd ----------------------------------------------------------------------------
+/usr/bin/ls start5mroyogu /usr/bin/ls start5mroyogu "|" /usr/bin/grep ___ 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+================================================================================
+Generating test 14
+Cmd ----------------------------------------------------------------------------
+ls start5mroyogu "|" /usr/bin/grep ___ ";" /usr/bin/cp /usr/bin/grep start5mroyogu/ ";" /usr/bin/ls start5mroyogu "|" start5mroyogu/grep grep 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+--------------------------------------------------------------------------------
+Done
+================================================================================
+()
+
+
+$> gcc -Wextra -Wall -Werror exec.c parse.c micro_utils.c microshell.c -o user_exe 
+
+
+
+_cd
+_exec_cmd
+_exec_tree
+_g_env
+_pipee
+
+
+
+_g_env
+_parse_cmd
+_parse_pipe
+_parse_tree
+_tree_new
+
+
+
+_err_fatal
+_ft_putstr
+_g_env
+
+
+
+_g_env
+_main
+
+
+
+__stack_chk_fail
+__stack_chk_guard
+chdir
+close
+dup2
+err_fatal
+execve
+exit
+fork
+ft_putstr
+pipe
+strcmp
+waitpid
+
+
+
+err_fatal
+malloc
+strcmp
+
+
+
+exit
+write
+
+
+
+
+exec_tree
+exit
+parse_tree
+
+
+$> gcc -Wextra -Wall -Werror main.c -o ref_exe 
+
+
+= Test 1 ===================================================
+total 32
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 5i4okk8qayfqei18064a93az
+
+
+$> ulimit -n 30; ./5i4okk8qayfqei18064a93az 
+
+total 24
+---x------  1 deepthought  staff  9268 Oct 28 10:28 5i4okk8qayfqei18064a93az
+
+
+$> ulimit -n 30; kk8qayfqei18064a93az 
+
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+
+Diff OK :D
+= Test 2 ===================================================
+total 32
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 746y86235sj7grodqkpirxtz
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthoug
+ht  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  
+174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r
+--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./746y86235sj7grodqkpirxtz cd ./start5mroyogu
+
+total 24
+---x------  1 deepthought  staff  9268 Oct 28 10:28 746y86235sj7grodqkpirxtz
+drwxr-xr-x  6 deepthought  staff   192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought
+  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  17
+4 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--
+r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./746y86235sj7grodqkpirxtz cd ./start5mroyogu
+
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+
+Diff OK :D
+= Test 3 ===================================================
+total 32
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 2obm2jzskkop3z8owivp4ubs
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthoug
+ht  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  
+174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r
+--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./2obm2jzskkop3z8owivp4ubs cd ./start5mroyogu; cd ..; cd ./start5mroyogu
+/bin/sh: line 0: cd: ./start5mroyogu: No such file or directory
+
+
+total 24
+---x------  1 deepthought  staff  9268 Oct 28 10:28 2obm2jzskkop3z8owivp4ubs
+drwxr-xr-x  6 deepthought  staff   192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought
+  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  17
+4 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--
+r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./2obm2jzskkop3z8owivp4ubs cd ./start5mroyogu; cd ..; cd ./start5mroyogu
+/bin/sh: line 0: cd: ./start5mroyogu: No such file or directory
+
+
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+
+Diff OK :D
+= Test 4 ===================================================
+total 32
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 tfqqwoy7u593zkdik80n40ht
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthoug
+ht  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  
+174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r
+--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./tfqqwoy7u593zkdik80n40ht /usr/bin/ls -laR start5mroyogu
+total 16
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 .
+drwxrwxrwx  4 deepthought  staff  128 Oct 28 10:28 ..
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff   56 Oct 28 10:28 f25yhy7147
+
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   91 Oct 28 10:28 f0f2pyfl79
+
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+start5mroyogu/1x8vsv9pp:
+total 8
+drwx
+r-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6
+nss43f
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   14 Oct 28 10:28 f0o5pbmopo
+
+start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+-rw-r--r-
+-  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+total 24
+drwxr-xr-x  6 deepthought  staff   192 Oct 28 10:28 start5mroyogu
+---x------  1 deepthought  staff  9268 Oct 28 10:28 tfqqwoy7u593zkdik80n40ht
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought
+  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  17
+4 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--
+r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./tfqqwoy7u593zkdik80n40ht /usr/bin/ls -laR start5mroyogu
+total 16
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 .
+drwxrwxrwx  4 deepthought  staff  128 Oct 28 10:28 ..
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff   56 Oct 28 10:28 f25yhy7147
+
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   91 Oct 28 10:28 f0f2pyfl79
+
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+start5mroyogu/1x8vsv9pp:
+total 8
+drwx
+r-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 ..
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6
+nss43f
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 .
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 ..
+-rw-r--r--  1 deepthought  staff   14 Oct 28 10:28 f0o5pbmopo
+
+start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 .
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 ..
+-rw-r--r-
+-  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+
+Diff OK :D
+= Test 5 ===================================================
+total 128
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 nt0mpsxopp2jvtiotfcsufmp
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./nt0mpsxopp2jvtiotfcsufmp /usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start
+start5mroyogu/0v3rh5m8o:
+start5mroyogu/0v3rh5m8o/02986hui9:
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+start5mroyogu/0v3rh5m8o/2u6agdloz:
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+start5mroyogu/1x8vsv9pp:
+start5mroyogu/1x8vsv9pp/0nwu4taq6:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+start5mroyogu/1x8vsv9pp/1id2xtvqu:
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+
+
+total 120
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+---x------  1 deepthought  staff   9268 Oct 28 10:28 nt0mpsxopp2jvtiotfcsufmp
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./nt0mpsxopp2jvtiotfcsufmp /usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start
+start5mroyogu/0v3rh5m8o:
+start5mroyogu/0v3rh5m8o/02986hui9:
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+start5mroyogu/0v3rh5m8o/2u6agdloz:
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+start5mroyogu/1x8vsv9pp:
+start5mroyogu/1x8vsv9pp/0nwu4taq6:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+start5mroyogu/1x8vsv9pp/1id2xtvqu:
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+
+
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+
+Diff OK :D
+= Test 6 ===================================================
+total 128
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 b2gm9nfwt8kee9muz1bkfckt
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+
+
+$> ulimit -n 30; ./b2gm9nfwt8kee9muz1bkfckt /usr/bin/ls -laR start5mroyogudoesexist "|" /usr/bin/grep start
+ls: start5mroyogudoesexist: No such file or directory
+
+
+total 120
+---x------  1 deepthought  staff   9268 Oct 28 10:28 b2gm9nfwt8kee9muz1bkfckt
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+
+
+$> ulimit -n 30; ./b2gm9nfwt8kee9muz1bkfckt /usr/bin/ls -laR start5mroyogudoesexist "|" /usr/bin/grep start
+ls: start5mroyogudoesexist: No such file or directory
+
+
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+
+Diff OK :D
+= Test 7 ===================================================
+total 128
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 mputjbsdivgiavnybvjj2fon
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./mputjbsdivgiavnybvjj2fon /usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+start5mroyogu/0v3rh5m8o:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp:$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/1id2xtvqu:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+total 120
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+---x------  1 deepthought  staff   9268 Oct 28 10:28 mputjbsdivgiavnybvjj2fon
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./mputjbsdivgiavnybvjj2fon /usr/bin/ls -laR start5mroyogu "|" /usr/bin/grep start "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+start5mroyogu/0v3rh5m8o:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp:$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/1id2xtvqu:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+
+Diff OK :D
+= Test 8 ===================================================
+total 136
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 w6engvp7ndx551l0cdz3lwoy
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthou
+ght  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6
+agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-
+rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./w6engvp7ndx551l0cdz3lwoy /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep m "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+qfk6rwm8arn4u1e$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+7rpzwushilwnlp9onvme4m85n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+total 128
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x------  1 deepthought  staff   9268 Oct 28 10:28 w6engvp7ndx551l0cdz3lwoy
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthou
+ght  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6
+agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-
+rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./w6engvp7ndx551l0cdz3lwoy /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep m "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+qfk6rwm8arn4u1e$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+7rpzwushilwnlp9onvme4m85n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+
+Diff OK :D
+= Test 9 ===================================================
+total 136
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 9yfy8cfguwwlqe0z0fbd8lkj
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthou
+ght  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6
+agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-
+rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./9yfy8cfguwwlqe0z0fbd8lkj /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep h "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+7rpzwushilwnlp9onvme4m85n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+36f7xuygtuvhctp$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+total 128
+---x------  1 deepthought  staff   9268 Oct 28 10:28 9yfy8cfguwwlqe0z0fbd8lkj
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthou
+ght  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6
+agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-
+rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./9yfy8cfguwwlqe0z0fbd8lkj /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep h "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+7rpzwushilwnlp9onvme4m85n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+36f7xuygtuvhctp$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+
+Diff OK :D
+= Test 10 ==================================================
+total 136
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 a4uja1pj5xqrnp9rlmwc8d0n
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthou
+ght  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6
+agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-
+rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./a4uja1pj5xqrnp9rlmwc8d0n /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep c "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+q6v1jds3pb76lt4naeyd8wouc4uki3pz8$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+36f7xuygtuvhctp$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+total 128
+---x------  1 deepthought  staff   9268 Oct 28 10:28 a4uja1pj5xqrnp9rlmwc8d0n
+-rw-r--r--  1 deepthought  staff     92 Oct 28 10:28 f0ty151b6d
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./a4uja1pj5xqrnp9rlmwc8d0n /usr/bin/ls start5mroyogu ";" /usr/bin/cat  start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb/f0ty151b6d "|" /usr/bin/grep c "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e  "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e "|" /usr/bin/cat -e
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+q6v1jds3pb76lt4naeyd8wouc4uki3pz8$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+36f7xuygtuvhctp$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+
+Diff OK :D
+= Test 11 ==================================================
+total 32
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 nm89hojzms4dbwky9ll2o071
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthoug
+ht  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  
+174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r
+--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./nm89hojzms4dbwky9ll2o071 cd ";" /usr/bin/ls start5mroyogu
+error: cd: bad arguments
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+
+total 24
+---x------  1 deepthought  staff  9268 Oct 28 10:28 nm89hojzms4dbwky9ll2o071
+drwxr-xr-x  6 deepthought  staff   192 Oct 28 10:28 start5mroyogu
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought
+  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  17
+4 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--
+r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./nm89hojzms4dbwky9ll2o071 cd ";" /usr/bin/ls start5mroyogu
+error: cd: bad arguments
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+
+
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+
+Diff OK :D
+= Test 12 ==================================================
+total 32
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 vk67rnowcmv1ivmjq994wy33
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthoug
+ht  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  
+174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r
+--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./vk67rnowcmv1ivmjq994wy33 cd ";" /usr/bin/ls start5mroyogu 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+error: cd: bad arguments
+
+
+total 24
+drwxr-xr-x  6 deepthought  staff   192 Oct 28 10:28 start5mroyogu
+---x------  1 deepthought  staff  9268 Oct 28 10:28 vk67rnowcmv1ivmjq994wy33
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought
+  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  17
+4 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--
+r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./vk67rnowcmv1ivmjq994wy33 cd ";" /usr/bin/ls start5mroyogu 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+0v3rh5m8o
+1x8vsv9pp
+f09zicbvah
+f1mw0bqbxv
+error: cd: bad arguments
+
+
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+
+Diff OK :D
+= Test 13 ==================================================
+total 128
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 udhusn1oajd8eld2yyncniuq
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./udhusn1oajd8eld2yyncniuq /usr/bin/ls start5mroyogu /usr/bin/ls start5mroyogu "|" /usr/bin/grep ___ 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+
+total 120
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x------  1 deepthought  staff   9268 Oct 28 10:28 udhusn1oajd8eld2yyncniuq
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71 Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./udhusn1oajd8eld2yyncniuq /usr/bin/ls start5mroyogu /usr/bin/ls start5mroyogu "|" /usr/bin/grep ___ 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+
+Diff OK :D
+= Test 14 ==================================================
+total 128
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x--x--x  1 deepthought  staff  13572 Oct 28 10:28 zvlgmclcq22q6ys07i2lkcat
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./zvlgmclcq22q6ys07i2lkcat ls start5mroyogu "|" /usr/bin/grep ___ ";" /usr/bin/cp /usr/bin/grep start5mroyogu/ ";" /usr/bin/ls start5mroyogu "|" start5mroyogu/grep grep 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+grep
+error: cannot execute ls
+
+
+total 120
+-rwxr-xr-x  1 deepthought  staff  47136 Oct 28 10:28 grep
+drwxr-xr-x  6 deepthought  staff    192 Oct 28 10:28 start5mroyogu
+---x------  1 deepthought  staff   9268 Oct 28 10:28 zvlgmclcq22q6ys07i2lkcat
+
+./start5mroyogu:
+total 16
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 0v3rh5m8o
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1x8vsv9pp
+-rw-r--r--  1 deepthought  staff  449 Oct 28 10:28 f09zicbvah
+-rw-r--r--  1 deepthought  staff  399 Oct 28 10:28 f1mw0bqbxv
+
+./start5mroyogu/0v3rh5m8o:
+total 24
+drwxr-xr-x  6 deepthought  staff  192 Oct 28 10:28 02986hui9
+drwxr-xr-x  7 deepthought  staff  224 Oct 28 10:28 2u6agdloz
+-rw-r--r--  1 deepthought  staff  293 Oct 28 10:28 f0or2k0k3r
+-rw-r--r--  1 deepthought  staff   11 Oct 28 10:28 f1rvt5r7zj
+-rw-r--r--  1 deepthought  staff  550 Oct 28 10:28 f2q5e9ih75
+
+./start5mroyogu/0v3rh5m8o/02986hui9:
+total 8
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0qhhb7nrb
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1o3dlrpvf
+drwxr-xr-x  4 deepthought
+  staff  128 Oct 28 10:28 21pyo71cg
+-rw-r--r--  1 deepthought  staff  489 Oct 28 10:28 f0zewrt7g4
+
+./start5mroyogu/0v3rh5m8o/02986hui9/0qhhb7nrb:
+total 16
+-rw-r--r--  1 deepthought  staff  92 Oct 28 10:28 f0ty151b6d
+-rw-r--r--  1 deepthought  staff  56 Oct 28 10:28 f25yhy7147
+
+./start5mroyogu/0v3rh5m8o/02986hui9/1o3dlrpvf:
+total 8
+-rw-r--r--  1 deepthought  staff  91 Oct 28 10:28 f0f2pyfl79
+
+./start5mroyogu/0v3rh5m8o/02986hui9/21pyo71cg:
+total 16
+-rw-r--r--  1 deepthought  staff  195 Oct 28 10:28 f0tn6d9yx6
+-rw-r--r--  1 deepthought  staff  692 Oct 28 10:28 f1rofmhyt7
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz:
+total 24
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 0e92schv6
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 1c8mkn8va
+-rw-r--r--  1 deepthought  staff  162 Oct 28 10:28 f08u75gy4n
+-rw-r--r--  1 deepthought  staff  363 Oct 28 10:28 f168d74s01
+-rw-r--r--  1 deepthought  staff  390 Oct 28 10:28 f2nmm9mtpw
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/0e92schv6:
+total 24
+-rw-r--r--  1 deepthought  staff   71
+ Oct 28 10:28 f0rs691smo
+-rw-r--r--  1 deepthought  staff  174 Oct 28 10:28 f167hxnjmv
+-rw-r--r--  1 deepthought  staff  670 Oct 28 10:28 f2hdcalj3e
+
+./start5mroyogu/0v3rh5m8o/2u6agdloz/1c8mkn8va:
+total 8
+-rw-r--r--  1 deepthought  staff  520 Oct 28 10:28 f0x2omacxq
+
+./start5mroyogu/1x8vsv9pp:
+total 8
+drwxr-xr-x  8 deepthought  staff  256 Oct 28 10:28 0nwu4taq6
+drwxr-xr-x  5 deepthought  staff  160 Oct 28 10:28 1id2xtvqu
+-rw-r--r--  1 deepthought  staff  290 Oct 28 10:28 f04k1uzhll
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6:
+total 24
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 008fkwoj1
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 1xitaci97
+drwxr-xr-x  3 deepthought  staff   96 Oct 28 10:28 27cs914r4
+-rw-r--r--  1 deepthought  staff   35 Oct 28 10:28 f0e8urt6qi
+-rw-r--r--  1 deepthought  staff  196 Oct 28 10:28 f1z79kx7d6
+-rw-r--r--  1 deepthought  staff  268 Oct 28 10:28 f273of3ntm
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/008fkwoj1:
+total 8
+-rw-r--r--  1 deepthought  staff  296 Oct 28 10:28 f0f6nss43f
+
+./
+start5mroyogu/1x8vsv9pp/0nwu4taq6/1xitaci97:
+total 16
+-rw-r--r--  1 deepthought  staff  284 Oct 28 10:28 f0xwaoogbv
+-rw-r--r--  1 deepthought  staff  721 Oct 28 10:28 f1bghe6jz2
+
+./start5mroyogu/1x8vsv9pp/0nwu4taq6/27cs914r4:
+total 8
+-rw-r--r--  1 deepthought  staff  14 Oct 28 10:28 f0o5pbmopo
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu:
+total 16
+drwxr-xr-x  4 deepthought  staff  128 Oct 28 10:28 0ov4oynrk
+-rw-r--r--  1 deepthought  staff   66 Oct 28 10:28 f0bjyn5ovp
+-rw-r--r--  1 deepthought  staff  603 Oct 28 10:28 f1wkfuwff5
+
+./start5mroyogu/1x8vsv9pp/1id2xtvqu/0ov4oynrk:
+total 16
+-rw-r--r--  1 deepthought  staff  151 Oct 28 10:28 f0bkhdinzl
+-rw-r--r--  1 deepthought  staff  676 Oct 28 10:28 f1c8j8vyh6
+
+
+$> ulimit -n 30; ./zvlgmclcq22q6ys07i2lkcat ls start5mroyogu "|" /usr/bin/grep ___ ";" /usr/bin/cp /usr/bin/grep start5mroyogu/ ";" /usr/bin/ls start5mroyogu "|" start5mroyogu/grep grep 2> /tmp/myerrors; /usr/bin/cat /tmp/myerrors
+grep
+error: cannot execute ls
+
+
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

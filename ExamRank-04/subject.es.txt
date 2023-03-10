@@ -1,0 +1,34 @@
+Nombre  : microshell
+Ficheros esperados   : *.c *.h
+Funciones permitidas: malloc, free, write, close, fork, waitpid, signal, kill, exit, chdir, execve, dup, dup2, pipe, strcmp, strncmp
+--------------------------------------------------------------------------------------
+
+Escriba un programa que se comporte como si estuviese ejecutando un comando shell
+- Se pasará a este programa como argumento la línea de comando a ejecutar
+- La ruta del ejecutable podrá ser absoluta o relativa, pero el programa no tendrá que crear una ruta (desde la variable PATH por ejemplo).
+- Debe implementar "|" y ";" como lo hace bash
+	- nunca probaremos un "|" inmediatamente antes o después de nada, "|" o ";"
+- Su programa debe implementar el comando integrado cd con una ruta como único argumento (sin '-' o sin argumentos)
+	- Si cd recibe una cantidad incorrecta de argumentos, debe mostrar en STDERR "error: cd: bad arguments" seguido por '\n'
+	- si un cd falla, el programa debe mostrar en STDERR "error: cd: cannot change directory to path_to_change" seguido por un '\n' donde path_to_change será el argumento que se le ha pasado a cd
+	- el comando cd nunca aparecerá inmediatamente antes o después de un "|"
+- No hace falta que gestione ningún wildcard (carácter comodín: *, ~ etc...)
+- No hace falta que gestione variables de entorno ($BLA ...)
+- Si una llamada al sistema, excepto execve y chdir, devuelve un error, el programa deberá mostrar de inmediato "error: fatal" in STDERR seguido por un '\n' y el programa debe salir
+- Si falla execve, debe mostrar en SSTDERR "error: cannot execute executable_that_failed" seguido por '\n' donde executable_that_failed será la ruta del ejecutable que ha fallado (debería ser el primer argumento de execve)
+- El programa debe ser capaz de gestionar centenares de  "|" aunque limitemos el número de ficheros abiertos a menos de 30.
+
+Por ejemplo, el comando siguiente debería funcionar:
+$>./microshell /bin/ls "|" /usr/bin/grep microshell ";" /bin/echo i love my microshell
+microshell
+i love my microshell
+$>./microshell /bin/echo WOOT "; /bin/echo NOPE;" "; ;" ";" /bin/echo YEAH
+WOOT ; /bin/echo NOPE; ; ;
+YEAH
+$>
+
+Pista:
+No olvide pasar la variable de entorno a execve
+
+Pista:
+Evite fugas de ficheros descriptores!

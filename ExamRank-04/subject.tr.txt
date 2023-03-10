@@ -1,0 +1,36 @@
+Assignment name  : microshell
+Expected files   : *.c *.h
+Allowed functions: malloc, free, write, close, fork, waitpid, signal, kill, exit, chdir, execve, dup, dup2, pipe, strcmp, strncmp
+--------------------------------------------------------------------------------------
+
+Bir shell komutunu calistiyor gibi davranan bir program yazin
+- Calistirilacak kod bu programin argumanlari olacak
+- Calistirilabilirin(Executable) yolu(path) net de olabilir, dolayli yoldan da olaabilir ama program bir yol kurmamali(ornek: PATH değiskeni)
+- Sunlarida eklemelisiniz, bash'daki gibi : "|" ve ";" 
+    - Programi denerken "|"ni hemen takip eden ve ya hemen öncesinde ne kullanacagimiza dikkat edecegiz, yani bos ve ya "|" ve ya ";" gelmeyecek.
+- Programin built-in komut olarak cd komutunu hesaba katilmis olmali, bir arguman ile beraber sadece yol(path)(parametresiz ve ya '-' gelmeyecek).
+    - Eger cd'deki arguman sayisi hatali ise programin STDERR icinde "error: cd: bad arguments" devaminda '\n' yazdirmali.
+    - Eger cd basarisiz olursa, program STDERR icinde "error: cd: cannot change directory to path_to_change"  devaminde '\n' yazdirmali ve path_to_change degismeli cd'deki arguman tarafindan
+    - Bir cd komutu asla "|"nin hemen ardindan ve ya hemen oncesinde gelmeyecek
+- Herhangi bir joker karakterle(wildcards) hesaba katmana gerek yok(*, ~ vs..). 
+- Ortamsal degiskenleri de hesaba katmana gerek yok($BLA ...)
+- Eger bir sistem cagrisi, exec ve chdir haric, hata dondururse, program o an "error: fatal" yazdirmali STDERR icinde devaminda '\n' ile birlikte ve cikis yapmali(exit)
+- Eger execve basarisiz olursa, STERR icinde "error: cannot execute executable_that_failed" devaminda '\n' yazdirmalisin, executable_that_failed degiskeninide basarisiz olan calistirilabilir(executable)'in yolu ile degistirmelisin(bu execve'nin ilk argumani olmali)
+- Program 100'den fazla "|"yi yonetebilecek seviyede olmali, "open files"i 30 dan az olacak sekilde sinirlasakta.
+
+ornek olarak:
+$>./microshell /bin/ls "|" /usr/bin/grep microshell ";" /bin/echo cunku sirf gunes geceyi sevmedi diye ay dogmayi birakmaz
+microshell
+cunku sirf gunes geceyi sevmedi diye ay dogmayi birakmaz
+$>./microshell /bin/echo SANI "; /bin/echo NOPE;" "; ;" ";" /bin/echo SER
+SANI ; /bin/echo NOPE; ; ;
+SER
+$>
+
+
+Ipucu:
+Execve'ye ortamsal(environment) degiskenleri gondermeyi unutma
+
+File descriptor'larda sizinti olmamali(acik kalmamali).
+
+Bu ipucu hayat icin: hayattaki tek onemli sey senin mutlu olup olmadigin :)
