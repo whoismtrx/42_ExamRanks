@@ -1,0 +1,80 @@
+Assignment name  : cpp_module_00
+Expected files   : Warlock.cpp Warlock.hpp
+--------------------------------------------------------------------------------
+
+Créez une classe Warlock en forme de Coplien.
+
+Elle a les attributs privés suivants:
+* name (string)
+* title (string)
+
+Vu qu'ils sont privés, vous aurez besoin des getters suivants :
+* getName, retourne une référence vers string constante
+* getTitle, retourne une référence vers string constante
+
+Ces deux fonctions doivent pouvoir être appelées sur un Warlock constant.
+
+Créez également le setter suivant :
+* setTitle, retourne void et prend une référence sur string constante.
+
+Votre Warlock va aussi avoir, en plus de tout ce qui est requis par la forme de
+Coplien, un constructeur prenant dans l'ordre son nom et son titre. Il ne peut
+ni être copìé, ni instancié par copie, ni instancié sans nom et titre.
+
+Par exemple :
+
+Warlock bob;                            //Ne compile pas
+Warlock bob("Bob", "the magnificent");  //Compile
+Warlock jim("Jim", "the nauseating");   //Compile
+bob = jim;                              //Ne compile pas
+Warlock jack(jim);                      //Ne compile pas
+
+À la création, le Warlock dit :
+
+<NAME>: This looks like another boring day.
+
+Bien évidemment, quand on utilise des placeholders comme <NAME>, <TITLE>,
+<QUOTE1>, etc... dans les sorties, vous les remplacerez par la valeur
+appropriée.
+
+À sa mort, il dit:
+
+<NAME>: My job here is done!
+
+Il devra également pouvoir se présenter tout en se mettant bien en valeur.
+
+Écrivez donc la fonction suivante:
+* void introduce() const;
+
+Qui affichera:
+
+<NAME>: I am <NAME>, <TITLE>!
+
+Voici un exemple de fonction main avec sa sortie:
+
+int main()
+{
+  Warlock const richard("Richard", "Mistress of Magma");
+  richard.introduce();
+  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+  Warlock* jack = new Warlock("Jack", "the Long");
+  jack->introduce();
+  jack->setTitle("the Mighty");
+  jack->introduce();
+
+  delete jack;
+
+  return (0);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Mistress of Magma!$
+Richard - Mistress of Magma$
+Jack: This looks like another boring day.$
+Jack: I am Jack, the Long!$
+Jack: I am Jack, the Mighty!$
+Jack: My job here is done!$
+Richard: My job here is done!$
+~$

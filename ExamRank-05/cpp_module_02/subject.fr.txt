@@ -1,0 +1,84 @@
+Assignment name  : cpp_module_02
+Expected files   : Warlock.cpp Warlock.hpp
+                   ASpell.hpp ASpell.cpp
+				   ATarget.hpp ATarget.cpp
+				   Fwoosh.hpp Fwoosh.cpp
+				   Dummy.hpp Dummy.cpp
+				   Fireball.hpp Fireball.cpp
+				   Polymorph.hpp Polymorph.cpp
+				   BrickWall.hpp BrickWall.cpp
+				   SpellBook.hpp SpellBook.cpp
+				   TargetGenerator.hpp TargetGenerator.cpp
+--------------------------------------------------------------------------------
+
+Dans les classes Warlock, SpellBook et TargetGenerator, le switch est tout à
+fait INTERDIT et son utilisation donnerait un -42.
+
+Créez les deux sorts suivants sur le même modèle que Fwoosh:
+
+* Fireball (Nom: "Fireball", Effect: "burnt to a crisp")
+* Polymorph (Nom: "Polymorph", Effect: "turned into a critter")
+
+En plus de ça, histoire de pas avoir que des mannequins à attaquer, faites lui
+une autre cible, qui sera BrickWall (Type: "Inconspicuous Red-brick Wall").
+
+Faites une classe SpellBook, en forme canonique, qui ne peut être copiée ni
+instanciée par copie. Elle aura les fonctions suivantes:
+
+* void learnSpell(ASpell*), qui COPIE un sort dans le livre
+* void forgetSpell(string const &), qui efface un sort du livre s'il s'y trouve
+* ASpell* createSpell(string const &), qui crée le sort correspondant et le
+  retourne.
+
+Modifiez maintenant le Warlock, pour qu'il aie un SpellBook avec le même cycle
+de vie. Faites également en sort que ses fonctions learnSpell et forgetSpell
+appellent celles de son livre.
+
+La fonction launchSpell devra utiliser le SpellBook pour créer le sort qu'elle
+essaie de lancer.
+
+Faites donc une classe TargetGenerator en forme canonique, non copiable (Comme
+le SpellBook).
+
+Il aura les fonctions suivantes:
+
+* void learnTargetType(ATarget*), apprend une cible au générateur
+
+* void forgetTargetType(string const &), fait oublier une cible au générateur
+  s'il la connaît
+
+* ATarget* createTarget(string const &), qui crée une cible du type spécifié.
+
+Votre code doit faire fonctionner le main qui suit. Tout n'est bien entendu pas vérifié,
+à vous de faire des tests plus extensifs.
+
+int main()
+{
+  Warlock richard("Richard", "foo");
+  richard.setTitle("Hello, I'm Richard the Warlock!");
+  BrickWall model1;
+
+  Polymorph* polymorph = new Polymorph();
+  TargetGenerator tarGen;
+
+  tarGen.learnTargetType(&model1);
+  richard.learnSpell(polymorph);
+
+  Fireball* fireball = new Fireball();
+
+  richard.learnSpell(fireball);
+
+  ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
+
+  richard.introduce();
+  richard.launchSpell("Polymorph", *wall);
+  richard.launchSpell("Fireball", *wall);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Hello, I'm Richard the Warlock!!$
+Inconspicuous Red-brick Wall has been turned into a critter!$
+Inconspicuous Red-brick Wall has been burnt to a crisp!$
+Richard: My job here is done!$
+~$

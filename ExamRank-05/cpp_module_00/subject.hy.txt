@@ -1,0 +1,80 @@
+Առաջադրանքի անունը՝ cpp_module_00
+Ակնկալվող ֆայլեր՝ Warlock.cpp Warlock.hpp
+--------------------------------------------------------------------------------
+Ստեղծեք մի Warlock դաս։ Այն պետք է լինի Քոպլիեն ձևաչափի։
+
+Այն պետք է ունենա հետևյալ փակ հատկանիշները՝
+* անուն (տող)
+* վերնագիր (տող)
+
+Քանի որ դրանք փակ են, պետք է գրել հետևյալ getter-ները՝
+* getName, վերադարձնում է հաստատուն տողի հղում
+* getTitle, վերադարձնում է հաստատուն տողի հղում
+
+Այս երկու ֆունկցիաները պետք է հնարավոր լինի կանչել հաստատուն Warlock-ի վրա։
+
+Ստեղծել հետևյալ setter-ը`
+* setTitle, վերադարձնում է void և ստանում է հաստատուն տողի հղում
+
+Ձեր Warlock-ը նաև կունենա, բացի այն ամենից ինչ պահանջվում է Քոփլիեն ձևաչափից,
+մի կոնստրուկտոր, որը այս հերթականությամբ վերցնում է իր անունն ու վերնագիրը։ Ձեր 
+Warlock-ը հնարավոր չի լինի կրկնօրինակել, ներկայացվել կրկնօրինակով կամ՝ առանց անվան ու վերնագրի։
+
+Օրինակներ՝
+
+Warlock bob;                            //Does not compile
+Warlock bob("Bob", "the magnificent");  //Compiles
+Warlock jim("Jim", "the nauseating");   //Compiles
+bob = jim;                              //Does not compile
+Warlock jack(jim);                      //Does not compile
+
+Ստեղծվելիս Warlock-ն ասում է՝
+
+<NAME>: Էլի ձանձրալի օր է լինելու․․․
+
+Իհարկե, <NAME>-ի, <TITLE>-ի և այլ նման տեղապահներ ելքում օգտագործելիս, 
+դրանք պետք է  փոխարինեք իրենց համապատասխան արժեքով՝ առանց < և > նշանների։
+Of course, whenever we use placeholders like <NAME>, <TITLE>, etc...
+in outputs, you will replace them by the appropriate value. Without the < and >.
+
+Երբ նա մահանա կասի՝
+
+<NAME>: Իմ գործն այստեղ ավարտված է։
+
+Մեր Warlock-ը պետք է կարողանա ինքն իրեն ներկայացնել` իր հզորությամբ հպարտանալով։ 
+
+Այսպիսով դուք կգրեք հետևյալ ֆուննկցիան՝
+* void introduce() const;
+
+Այն պետք է արտածի՝
+
+<NAME>: I am <NAME>, <TITLE> !
+
+Ահա main ֆունկցիայի փորձնական մի օրինակ և դրա հետ կապված ելք՝
+
+int main()
+{
+  Warlock const richard("Richard", "Mistress of Magma");
+  richard.introduce();
+  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+  Warlock* jack = new Warlock("Jack", "the Long");
+  jack->introduce();
+  jack->setTitle("the Mighty");
+  jack->introduce();
+
+  delete jack;
+
+  return (0);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Mistress of Magma!$
+Richard - Mistress of Magma$
+Jack: This looks like another boring day.$
+Jack: I am Jack, the Long!$
+Jack: I am Jack, the Mighty!$
+Jack: My job here is done!$
+Richard: My job here is done!$
+~$

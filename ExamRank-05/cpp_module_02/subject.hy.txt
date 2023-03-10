@@ -1,0 +1,85 @@
+Առաջադրանքի անունը՝ cpp_module_02
+Ակնկալվող ֆայլեր՝  Warlock.cpp Warlock.hpp
+                   ASpell.hpp ASpell.cpp
+				   ATarget.hpp ATarget.cpp
+				   Fwoosh.hpp Fwoosh.cpp
+				   Dummy.hpp Dummy.cpp
+				   Fireball.hpp Fireball.cpp
+				   Polymorph.hpp Polymorph.cpp
+				   BrickWall.hpp BrickWall.cpp
+				   SpellBook.hpp SpellBook.cpp
+				   TargetGenerator.hpp TargetGenerator.cpp
+--------------------------------------------------------------------------------
+
+Warlock, SpellBook և TargetGenerator դասերում switch-ը ՉԻ ԹՈՒՅԼԱՏՐՎՈՒՄ, դրա
+գործածումը  կհանգեցնի -42-ի։
+
+Կառուցել հետևյալ երկու հմայախոսքերը նույն մոդելով ինչ Fwoosh-ը՝
+
+* Fireball (Name: "Fireball", Effects: "burnt to a crisp")
+* Polymorph (Name: "Polymorph", Effects: "turned into a critter")
+
+Սրանից բացի, որպեսզի միայն dummy-իի վրա չհարձակվի, եկե՛ք նրա համար նոր թիրախ ստեղծենք,
+որը կլինի BrickWall(աղյուսե պատ) (Տեսակ՝ «Inconspicuous Red-brick Wall»)։
+
+Հիմա ստեղծե՛ք SpellBook դաս՝ կանոնիկ ֆորմատով, որը հնարավոր չի կրկնօրինակել կամ օրինակով
+ներկայացվել։ Այն կունենա հետևյալ ֆունկցիաները՝
+
+* void learnSpell(ASpell*), որը հմայախոսք է ԿՐԿՆՕՐԻՆԱԿՈՒՄ գրքում 
+* void forgetSpell(string const &), որը գրքից հմայախոսք է ջնջում, 
+բացառությամբ եթե այն գրքում չէ
+* ASpell* createSpell(string const &), որը ստանում կախարդանքի խոսքի անունին
+համապատասխան տող, ստեղծում է այն և վերադարձնում։
+
+Ձևափոխեք Warlock-ը, հիմա այնպես արեք, որ այն հմայախոսքերի գիրք ունենա, 
+որը կստեղծվի ու կվերացվի նրանով։ Նաև ստեղծեք նրա learnSpell և forgetSpell
+ֆունկցիաները, դրանք կանչեք հմայախոսքերի գիրքից։
+
+launchSpell ֆունկցիան պետք է գործածի SpellBook-ը՝ ստեղծելու համար
+այն հմայախոսքը, որը փորձում է գործարկել։
+
+Ստեղծել TargetGenerator դաս՝ կանոնիկ ֆորմատով և նախորդնորի պես՝ չկրկնօրինակելի։
+
+Այն կունենա հետևյալ ֆունկցիաները՝
+
+* void learnTargetType(ATarget*), գեներատորին թիրախի հետ է ծանոթացնում
+
+* void forgetTargetType(string const &), ստիպում է գեներատորին մոռանալ թիրախի տեսակը, 
+եթե այն հայտնի է
+
+* ATarget* createTarget(string const &), նշված տեսակի թիրախ է ստեղծում
+
+Լավ է, սրանից պրծանք։ Ահա փորձնական main-ը։ Այն այնքան էլ մանրակրկիտ չէ, այնպես որ, լավ կանեք՝
+ձերն էլ գործածեք։
+
+
+int main()
+{
+  Warlock richard("Richard", "foo");
+  richard.setTitle("Hello, I'm Richard the Warlock!");
+  BrickWall model1;
+
+  Polymorph* polymorph = new Polymorph();
+  TargetGenerator tarGen;
+
+  tarGen.learnTargetType(&model1);
+  richard.learnSpell(polymorph);
+
+  Fireball* fireball = new Fireball();
+
+  richard.learnSpell(fireball);
+
+  ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
+
+  richard.introduce();
+  richard.launchSpell("Polymorph", *wall);
+  richard.launchSpell("Fireball", *wall);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Hello, I'm Richard the Warlock!!$
+Inconspicuous Red-brick Wall has been turned into a critter!$
+Inconspicuous Red-brick Wall has been burnt to a crisp!$
+Richard: My job here is done!$
+~$

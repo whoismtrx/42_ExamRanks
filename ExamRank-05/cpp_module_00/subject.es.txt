@@ -1,0 +1,78 @@
+Assignment name  : cpp_module_00
+Expected files   : Warlock.cpp Warlock.hpp
+--------------------------------------------------------------------------------
+
+Cree una clase Warlock con forma Coplien.
+
+Tendrá los siguientes atributos privados:
+* name (string)
+* title (string)
+
+Como son privados, necesitará los siguientes getters:
+* getName, devuelve una referencia a una cadena constante
+* getTitle, devuelve una referencia a una cadena constante
+
+Se debe poder llamar a estas dos funciones sobre un Warlock constante.
+
+Cree también el siguiente setter:
+* setTitle, devuelve void y recibe una referencia sobre una cadena constante.
+
+Además de todo lo requerido por la forma Coplien, su Warlock también va a tener
+un constructor que recibirá su nombre y su título, en ese orden. No puede
+ni ser copiado, ni instanciado por copia, ni instanciado sin nombre y título.
+
+Por ejemplo:
+
+Warlock bob;                            //No compila
+Warlock bob("Bob", "the magnificent");  //Compila
+Warlock jim("Jim", "the nauseating");   //Compila
+bob = jim;                              //No compila
+Warlock jack(jim);                      //No compila
+
+En el momento de su creación, el Warlock dice:
+
+<NAME>: This looks like another boring day.
+
+Por supuesto, cuando utilizamos placeholders como <NAME>, <TITLE>, etc. en las salidas, los remplazará por el valor que corresponda. Sin el < and >.
+
+Cuando se muere, dice:
+
+<NAME>: My job here is done!
+
+También tendrá que poder presentarse luciéndose bien.
+
+Escriba entonces la función siguiente:
+* void introduce() const;
+
+Que mostrará:
+
+<NAME>: I am <NAME>, <TITLE>!
+
+He aquí un ejemplo de función main con su salida:
+
+int main()
+{
+  Warlock const richard("Richard", "Mistress of Magma");
+  richard.introduce();
+  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+  Warlock* jack = new Warlock("Jack", "the Long");
+  jack->introduce();
+  jack->setTitle("the Mighty");
+  jack->introduce();
+
+  delete jack;
+
+  return (0);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Mistress of Magma!$
+Richard - Mistress of Magma$
+Jack: This looks like another boring day.$
+Jack: I am Jack, the Long!$
+Jack: I am Jack, the Mighty!$
+Jack: My job here is done!$
+Richard: My job here is done!$
+~$
