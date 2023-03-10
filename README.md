@@ -7,9 +7,9 @@ This repository contains the subjects and solutions for various 42 school exams.
 The following exams are included in this repository:
 
   - ExamRank-02
-  - ExamRank-03
-  - ExamRank-04
-  - ExamRank-05
+  - ExamRank-03, [click here](./ExamRank-03/)
+  - ExamRank-04, [click here](./ExamRank-04/)
+  - ExamRank-05, [click here](./ExamRank-05/)
   
 ## Usage
 
