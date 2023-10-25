@@ -10,6 +10,7 @@ The following exams are included in this repository:
   - [ExamRank-03](./ExamRank-03/)
   - [ExamRank-04](./ExamRank-04/)
   - [ExamRank-05](./ExamRank-05/)
+  - [ExamRank-06](./ExamRank-06/)
   
 ## Usage
 
