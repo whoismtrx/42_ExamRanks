@@ -6,7 +6,7 @@ This repository contains the subjects and solutions for various 42 school exams.
 
 The following exams are included in this repository:
 
-  - ExamRank-02
+  - [ExamRank-02](https://github.com/users/zelhajou/projects/13)
   - [ExamRank-03](./ExamRank-03/)
   - [ExamRank-04](./ExamRank-04/)
   - [ExamRank-05](./ExamRank-05/)
