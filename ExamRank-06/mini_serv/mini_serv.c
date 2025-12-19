@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mini_serv.c                                        :+:      :+:    :+:   */
+/*  mini_serv.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orekabe <orekabe@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:57:45 by orekabe           #+#    #+#             */
-/*   Updated: 2023/10/29 20:57:46 by orekabe          ###   ########.fr       */
+/*   Updated: 2025/12/18 11:56:15 by orekabe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libc.h>
+#include <errno.h>
+#include <string.h>
+#include <unistd.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h> //
+#include <stdio.h> //
+#include <stdlib.h> //
 
 char*   ARG = "Wrong number of arguments\n";
 char*   FATAL = "Fatal error\n";
-char    ANONCMENT[200000], MSG[200000], BUFF[200000];
-int     sockfd, nclifd, nfds, id, ids[1024], ret;
+char    ANONCMENT[600020], MSG[600000], BUFF[1024][600000];
+int     sockfd, nclifd, nfds, id, ids[1024], ret, idx[1024] = {0};
 struct  sockaddr_in servaddr, cli;
 fd_set  fds, rfds;
 socklen_t clilen;
@@ -29,7 +37,7 @@ void    err(char *str)
 void    announcement(char *str, int cli)
 {
     for(int fd = 0; fd < nfds; fd++)
-        if (fd != cli && FD_ISSET(fd, &fds))
+        if (fd != sockfd && fd != cli && FD_ISSET(fd, &fds))
             send(fd, str, strlen(str), 0);
 }
 
@@ -55,17 +63,17 @@ void    left_client(int fd)
 void    share_msg(int fd)
 {
     bzero(ANONCMENT, sizeof(ANONCMENT));
-    bzero(BUFF, sizeof(BUFF));
-    for(int i=0, j=0; MSG[i]; i++, j++)
+    for(int i=0; MSG[i]; i++)
     {
-        BUFF[j] = MSG[i];
+        BUFF[ids[fd]][idx[ids[fd]]] = MSG[i];
+        idx[ids[fd]]++;
         if (MSG[i] == '\n')
         {
-            sprintf(ANONCMENT, "client %d: %s", ids[fd], BUFF);
+            sprintf(ANONCMENT, "client %d: %s", ids[fd], BUFF[ids[fd]]);
             announcement(ANONCMENT, fd);
-            j = -1;
+            bzero(BUFF[ids[fd]], idx[ids[fd]]);
+            idx[ids[fd]] = 0;
             bzero(ANONCMENT, sizeof(ANONCMENT));
-            bzero(BUFF, sizeof(BUFF));
         }
     }
     bzero(MSG, sizeof(MSG));
