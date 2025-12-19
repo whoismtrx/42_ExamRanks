@@ -16,9 +16,9 @@
 #include <netdb.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <sys/select.h> //
-#include <stdio.h> //
-#include <stdlib.h> //
+#include <sys/select.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 char*   ARG = "Wrong number of arguments\n";
 char*   FATAL = "Fatal error\n";
